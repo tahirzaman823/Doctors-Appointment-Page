@@ -34,4 +34,4 @@ This project is fully customizable. I can set it up for your specific needs:
 
 ## 📄 License
 
-© 2025 Your Name. All rights reserved.
+© 2025 Tahir Zaman. All rights reserved.
