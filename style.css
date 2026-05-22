@@ -1,17 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    /* Creating the grid lines using linear gradients */
     background-image:
         linear-gradient(to right, rgba(0, 119, 204, 0.15) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0, 119, 204, 0.15) 1px, transparent 1px);
-
-    /* Setting the size of each grid square (e.g., 30px by 30px) */
     background-size: 30px 30px;
     font-family: sans-serif;
 }
 
-/* Optional wrapper to ensure content sits nicely on top */
 .header-container {
     min-height: 20vh;
     width: 40vw;
@@ -26,13 +22,13 @@ body {
     text-align: center;
     padding: 10px;
 }
-.header-container p{
+.header-container p {
     font-weight: bold;
 }
 
 .doctor {
     background-color: white;
-    min-height: 45vh; /* Slightly increased to fit the button cleanly */
+    min-height: 45vh;
     width: 40vw;
     margin: 20px auto;
     border: 2px solid rgba(115, 70, 219, 0.877);
@@ -47,7 +43,7 @@ body {
 .theme {
     background-color: rgba(115, 70, 219, 0.877);
     color: white;
-    border: 2px solid transparent; /* Smoother look than sharp black */
+    border: 2px solid transparent;
     border-radius: 15px;
     width: 30vw;
     height: 50px;
@@ -62,19 +58,19 @@ body {
 .theme label {
     cursor: pointer;
     font-weight: 500;
-    flex-grow: 1; /* Makes the entire row label clickable */
+    flex-grow: 1;
     padding: 15px 0;
 }
 
 .theme input {
-    height: 20px; /* Fixed: Made it square so it stays a perfect circle */
+    height: 20px;
     width: 20px;
     cursor: pointer;
 }
 
 .btn-click {
     padding: 12px 24px;
-    margin-top: 20px; /* Changed from margin-left to keep it centered */
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
@@ -84,62 +80,51 @@ body {
     cursor: pointer;
     outline: none;
     transition: all 0.1s ease;
-
-    /* Initial crisp shadow to give it depth */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
                 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-/* 2. Hover state */
 .btn-click:hover {
-    background-color: rgba(95, 50, 199, 1); /* Matches your purple scheme better than blue */
+    background-color: rgba(95, 50, 199, 1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* 3. The "Click Feel" (Active State) */
 .btn-click:active {
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-/* ==========================================================================
-   UNIFIED APPOINTMENT FORM STYLES (Matched to Purple Layout & 40vw Width)
-   ========================================================================== */
-
 .appointment-card {
     display: none;
-    width: 40vw;                  /* Matched exactly with .doctor and .header-container width */
-    margin: 20px auto;            /* Consistent structural layout gaps */
+    width: 40vw;
+    margin: 20px auto;
     padding: 2.5rem 2rem;
-    background-color: white;      /* Clean background blend with .doctor card */
+    background-color: white;
     border: 2px solid rgba(115, 70, 219, 0.877);
-    border-radius: 25px;          /* Matched border radii structure */
+    border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;       /* Keeps paddings safe inside 40vw boundary */
+    box-sizing: border-box;
 }
 
-/* Header Text Styling */
 .form-title {
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 2rem;
     letter-spacing: -0.025em;
-    color: #333333;               /* Solid dark grey readable header text */
+    color: #333333;
     text-align: center;
 }
 
 .highlight-text {
-    color: rgba(115, 70, 219, 1); /* Swapped blue for your theme's primary purple */
+    color: rgba(115, 70, 219, 1);
     position: relative;
     font-weight: bold;
 }
 
-/* Form Input Layouts */
 .input-group {
-    width: 30vw;                  /* Matches inner contents of .theme card precisely */
-    margin: 0 auto 1.5rem auto;   /* Automatically centers fields inside layout */
+    width: 30vw;
+    margin: 0 auto 1.5rem auto;
     display: flex;
     flex-direction: column;
 }
@@ -148,7 +133,7 @@ body {
     font-size: 0.9rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: rgba(115, 70, 219, 1); /* Subtle theme accent text */
+    color: rgba(115, 70, 219, 1);
     letter-spacing: 0.01em;
 }
 
@@ -160,7 +145,7 @@ body {
 .form-input {
     width: 100%;
     padding: 0.85rem 1rem;
-    background: #fdfbff;          /* Hint of clean matching purple-white backdrop tint */
+    background: #fdfbff;
     border: 2px solid rgba(115, 70, 219, 0.3);
     border-radius: 12px;
     font-size: 0.95rem;
@@ -169,10 +154,9 @@ body {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Interactive States */
 .form-input:focus {
     outline: none;
-    border-color: rgba(115, 70, 219, 0.877); /* Transitions cleanly into crisp theme style border */
+    border-color: rgba(115, 70, 219, 0.877);
     background: #ffffff;
     box-shadow: 0 0 0 4px rgba(115, 70, 219, 0.15);
 }
@@ -181,11 +165,10 @@ body {
     color: #a0a5b5;
 }
 
-/* Button & Status Sub-components */
 .submit-btn {
-    width: 30vw;                  /* Matched dimension limits of input items */
+    width: 30vw;
     display: block;
-    margin: 1.5rem auto 0 auto;   /* Clean center position placement layout */
+    margin: 1.5rem auto 0 auto;
     padding: 12px 24px;
     background-color: rgba(115, 70, 219, 0.877);
     border: none;
@@ -199,7 +182,7 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: rgba(95, 50, 199, 1); /* Matches your hover states elsewhere */
+    background-color: rgba(95, 50, 199, 1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -216,37 +199,28 @@ body {
     min-height: 20px;
 }
 
-/* ==========================================================================
-   SUCCESS CONFIRMATION CONTAINER (Matched to Purple Layout & 40vw Width)
-   ========================================================================== */
-
 .confirmation-view {
     display: none;
-    width: 40vw;                  /* Matched exactly with upper components */
-    margin: 20px auto;            /* Center alignment layouts */
+    width: 40vw;
+    margin: 20px auto;
     padding: 3rem 2rem;
-    background-color: white;      /* Clean background blend */
-    border: 3px solid #10b981;    /* Accent Green border to display success state */
+    background-color: white;
+    border: 3px solid #10b981;
     border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.1); /* Subtle emerald green shadow drop */
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.1);
     box-sizing: border-box;
     text-align: center;
-    
-    /* Uncomment the line below to hide the card until booking is processed successfully */
-    /* display: none; */
 }
 
-/* Success Main Message */
 .success-title {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #10b981;               /* Emerald Green text */
+    color: #10b981;
     margin-top: 0;
     margin-bottom: 1.5rem;
     letter-spacing: -0.01em;
 }
 
-/* Token Identification Number Styles */
 .token-title {
     font-size: 1.6rem;
     font-weight: 600;
@@ -257,15 +231,14 @@ body {
 .token-badge {
     display: inline-block;
     padding: 4px 16px;
-    background-color: rgba(115, 70, 219, 0.1); /* Pale purple highlight fill background */
-    color: rgba(115, 70, 219, 1);               /* Contrast core purple typography weight */
+    background-color: rgba(115, 70, 219, 0.1);
+    color: rgba(115, 70, 219, 1);
     border-radius: 12px;
     font-size: 2rem;
     font-weight: 800;
     margin-left: 5px;
 }
 
-/* Doctor Working Schedule Text Styling */
 .schedule-title {
     font-size: 1rem;
     font-weight: 500;
@@ -281,123 +254,163 @@ body {
     border-radius: 6px;
     font-size: 0.95rem;
 }
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-========================================== */
 
-/* Large tablets / small laptops */
-@media (max-width: 1024px) {
-    .header-container,
-    .doctor,
-    .appointment-card,
-    .confirmation-view {
-        width: 60vw;
+
+/* ==========================================================================
+   MEDIA QUERIES — Responsive for All Devices
+   ========================================================================== */
+
+/* Tablet — 768px and below */
+@media (max-width: 768px) {
+
+    .header-container {
+        width: 80vw;
+        min-height: 15vh;
+        margin: 20px auto;
     }
 
-    .theme,
-    .input-group,
+    .doctor {
+        width: 80vw;
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    .theme {
+        width: 68vw;
+    }
+
+    .appointment-card {
+        width: 80vw;
+        padding: 2rem 1.5rem;
+    }
+
+    .input-group {
+        width: 68vw;
+    }
+
     .submit-btn {
-        width: 50vw;
+        width: 68vw;
+    }
+
+    .confirmation-view {
+        width: 80vw;
+        padding: 2rem 1.5rem;
     }
 }
 
+/* Mobile — 480px and below */
+@media (max-width: 480px) {
 
-/* Tablets */
-@media (max-width: 768px) {
-    .header-container,
-    .doctor,
-    .appointment-card,
-    .confirmation-view {
-        width: 80vw;
-        padding: 20px;
+    .header-container {
+        width: 90vw;
+        min-height: auto;
+        padding: 20px 15px;
+        margin: 15px auto;
+        border-radius: 12px;
     }
 
-    .theme,
-    .input-group,
-    .submit-btn {
-        width: 70vw;
+    .header-container h1 {
+        font-size: 1.4rem;
+    }
+
+    .header-container p {
+        font-size: 0.9rem;
+    }
+
+    .doctor {
+        width: 90vw;
+        min-height: auto;
+        padding: 15px 0;
+        border-radius: 18px;
+    }
+
+    .theme {
+        width: 78vw;
+        height: 48px;
+        padding: 0 15px;
+        border-radius: 12px;
+        margin: 8px;
+    }
+
+    .btn-click {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .appointment-card {
+        width: 90vw;
+        padding: 1.5rem 1rem;
+        border-radius: 18px;
+        margin: 15px auto;
     }
 
     .form-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .input-group {
+        width: 78vw;
+        margin-bottom: 1.2rem;
+    }
+
+    .form-input {
+        padding: 0.75rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        width: 78vw;
+        font-size: 15px;
+        padding: 11px 20px;
+    }
+
+    .confirmation-view {
+        width: 90vw;
+        padding: 2rem 1rem;
+        border-radius: 18px;
+        margin: 15px auto;
     }
 
     .success-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .token-title {
+        font-size: 1.3rem;
     }
 
     .token-badge {
         font-size: 1.6rem;
+        padding: 4px 12px;
+    }
+
+    .schedule-title {
+        font-size: 0.9rem;
     }
 }
 
+/* Very small phones — 360px and below */
+@media (max-width: 360px) {
 
-/* Mobile devices */
-@media (max-width: 480px) {
     .header-container,
     .doctor,
     .appointment-card,
     .confirmation-view {
         width: 95vw;
-        margin: 15px auto;
-        padding: 15px;
-        border-radius: 15px;
     }
 
     .theme,
     .input-group,
     .submit-btn {
-        width: 90vw;
-    }
-
-    .theme {
-        height: auto;
-        padding: 15px;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .theme label {
-        padding: 0;
+        width: 83vw;
     }
 
     .form-title {
         font-size: 1.1rem;
     }
 
-    .btn-click,
-    .submit-btn {
-        font-size: 14px;
-        padding: 10px 18px;
-    }
-
     .token-badge {
-        font-size: 1.3rem;
-        padding: 6px 12px;
-    }
-
-    .time-window {
-        display: inline-block;
-        margin-top: 8px;
-    }
-}
-
-
-/* Very small devices */
-@media (max-width: 320px) {
-    .form-title,
-    .success-title {
-        font-size: 1rem;
-    }
-
-    .btn-click,
-    .submit-btn {
-        width: 100%;
-    }
-
-    .theme,
-    .input-group {
-        width: 100%;
+        font-size: 1.4rem;
     }
 }
