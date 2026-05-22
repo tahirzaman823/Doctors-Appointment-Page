@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Grid Background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="navbar">
+        <div class="header-container">
+            <h1>Get Appointment</h1> <!-- Fixed typo here -->
+            <p id="message">Select your Doctor to get Appointment </p>
+        </div>
+
+        <div class="doctor">
+
+            <div class="theme skin-specialist">
+                <label for="skin">Skin Specialist</label>
+                <input type="radio" class="input-check" id="skin" name="specialist-select">
+            </div>
+
+            <div class="theme neuro-specialist">
+                <label for="neuro">Neuro Specialist</label>
+                <input type="radio" class="input-check" id="neuro" name="specialist-select">
+            </div>
+
+            <div class="theme ortho-specialist">
+                <label for="ortho">Ortho Specialist</label>
+                <input type="radio" class="input-check" id="ortho" name="specialist-select">
+            </div>
+
+            <!-- Moved the button inside the card container for a cohesive card design -->
+            <button id="book-appointment" class="btn-click">Book Appointment</button>
+
+        </div>
+
+
+
+
+        <div class="appointment-card">
+            <h1 class="form-title">Your Doctor is <span id="selected-doctor-name" class="highlight-text">None
+                    Selected</span></h1>
+
+            <div class="input-group">
+                <label for="patient-name" id="Patient-name" class="field-label">Enter Patient Name</label>
+                <div class="input-wrapper">
+                    <input type="text" id="patient-name" class="form-input" placeholder="E.g., John Doe">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="patient-phone" class="field-label">Phone Number</label>
+                <div class="input-wrapper">
+                    <input type="tel" id="patient-phone" class="form-input"
+                        placeholder="whatsapp number or phone number">
+                </div>
+            </div>
+
+            <button type="button" id="book-appointment" class="submit-btn">Confirm Appointment</button>
+            <p id="message" class="status-message"></p>
+        </div>
+
+
+
+
+        <div class="confirmation-view">
+            <h2 class="success-title">Your Appointment Was Booked Successfully!</h2>
+            <h1 class="token-title">Token Number: <span id="token-id" class="token-badge">47</span></h1>
+            <h3 class="schedule-title">Doctor's Schedule: <span class="time-window">5:00 AM – 9:00 PM</span></h3>
+        </div>
+
+
+
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
