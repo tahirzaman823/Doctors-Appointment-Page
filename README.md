@@ -27,8 +27,8 @@ This project is fully customizable. I can set it up for your specific needs:
 
 ## 📬 Contact
 
-- GitHub: [@your-username](https://github.com/your-username)
-- Email: your@email.com
+- Whatsapp: +923082540460 
+- Email: m.tahirzaman823@gemail.com
 
 ---
 
